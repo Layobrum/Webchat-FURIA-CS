@@ -1,0 +1,407 @@
+/* AQUI COMEÇA A ESTILIZAÇÃO DO ARQUIVO HTML BASE */
+/* Estilização do corpo principal da página */
+body {
+    background-image: url("furia-banner2.png"); /* Imagem de fundo */
+    background-size: cover; /* Cobre toda a tela */
+    background-color: rgba(59, 37, 94, 0);
+    background-blend-mode: multiply; 
+    background-repeat: no-repeat; /* Não repete a imagem de fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-attachment: fixed; /* Fixa a imagem de fundo */
+    min-height: 100vh; /* Altura mínima da tela */
+    min-height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll; /* Adiciona barra de rolagem vertical se necessário */
+}
+/* Aqui termina a estilização do corpo principal da página */
+
+/* Estilização do cabeçalho */
+.header {
+    background-color: #0f0f0f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Espaçamento interno */
+}
+
+/* Estilização do espaço que fica a logo e o bordão */
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilização da logo */
+.logo {
+    height: 50px; /* Altura da logo */
+    margin-right: 10px;
+}
+
+/* Estilização do bordao */
+.bordao {
+    font-size: 1.2em; 
+    font-weight: bold;
+}
+
+/* Estilização do título */
+.titulo {
+    margin: 0; /* Remove a margem padrão do título h1 */
+}
+
+/* Estilização dos botoes checkbox para exibir as infos */
+.opcoes-header {
+    margin-right: 5px;
+}
+
+/* Aqui termina a estilização do cabeçalho */
+
+/* Estilização do rodapé */
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Para ocupar toda a largura da viewport */
+    background-color: rgba(0, 0, 0, 0.65); /* Preto com 50% de opacidade */
+    color: white;
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0px; /* Espaçamento vertical */
+    font-size: 0.85em;
+    z-index: 10; /* Para garantir que fique acima de outros elementos, se necessário */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Estilização do link do rodapé */
+#footer a {
+    color: #161ae4;
+    text-decoration: underline;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */    
+}
+/* Aqui termina a estilização do rodapé */
+
+/* Estilização do conteúdo das abas */
+
+
+.tab-content {
+    position: absolute; /* Posiciona os containers de forma absoluta */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+    width: 20%; /* Largura dos containers laterais */
+    margin-top: 20px;
+    max-height: 60vh; /* Altura dos containers laterais */
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none; /* Mantém oculto até o JS mostrar */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo com transparência */
+    color: #000;
+}
+
+#lineup, #resultados {
+    box-sizing: border-box;
+    border-radius: 5px; /* Mantém oculto até o JS mostrar */
+}
+
+#lineup-container {
+    top: center;
+    left: 1%; /* Posiciona à esquerda */
+    background-color: rgba(1, 4, 34, 0.8);
+    color: white;
+    max-height: 80vh;
+}
+
+#resultados-container {
+    top: center;
+    right: 1%; /* Posiciona à direita */
+    background-color: rgba(1, 4, 34, 0.8);
+    color: white;
+    min-height: 80vh;
+}
+
+#lineup-container h2,
+#resultados-container h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#lineup-players {
+    display: flex; /* Usar Flexbox para os cards */
+    flex-wrap: wrap; /* Quebrar para a próxima linha se necessário */
+    justify-content: space-around; /* Espaçamento entre os cards */
+    align-items: center; /* Alinhar verticalmente */
+}
+
+.player-card {
+    width: 40%; /* Ajustar a largura para acomodar 5 cards (com margens) */
+    max-width: 150px;
+    margin: 10px; /* Espaçamento entre os cards */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box; /* Incluir padding e borda no tamanho */
+    background-color: rgba(78, 60, 88, 0.8); /* Fundo com transparência */
+}
+
+.player-image {
+    width: 80%; /* Reduzir o tamanho da imagem */
+    max-width: 100px; /* Defina um max-width para a imagem */
+    height: auto;
+    border-radius: 50%; /* Mantém a imagem redonda */
+    margin-bottom: 10px;
+}
+
+.player-name {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#resultados-partidas {
+    display: flex;
+    flex-direction: column; /* Organizar partidas verticalmente */
+    align-items: center; /* Centralizar os itens horizontalmente */
+}
+
+.partida-card {
+    width: 90%; /* Largura dos cards de partida */
+    margin-bottom: 15px; /* Espaçamento entre os cards */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.partida-placar {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.partida-times {
+    display: flex;
+    justify-content: center; /* Centralizar as imagens */
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.team-image {
+    width: 20%; /* Tamanho das imagens dos times */
+    max-width: 50px;
+    height: auto;
+    margin: 0 10px; /* Espaçamento entre as imagens */
+}
+
+.partida-data {
+    font-size: 0.85em;
+    color: #666;
+}
+/* Aqui termina a estilização do conteúdo das abas */
+/* AQUI TERMINA A ESTILIZAÇÃO DO BODY */
+
+/* AQUI COMEÇA A ESTILIZAÇÃO DO ARQUIVO HTML DO CHAT */
+/* Estilização do container do chat */
+#content {
+    width: 100%; /* Garante que ocupa a largura total */
+    display: flex; /* Usar flexbox para alinhar os containers */
+    flex-wrap: wrap; /* Permite que os containers quebrem para a próxima linha */
+    justify-content: space-between; /* Espaçamento entre os containers */
+    align-items: flex-start; /* Alinha os itens no início do container */
+    padding: 20px; /* Adicione padding para espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não cause problemas de tamanho */
+}
+
+#chat-container {
+    width: 100%;
+    max-width: 80vh; /* Largura máxima do container */
+    margin: 20px auto; /* Centraliza o container na tela */
+    border: 1.5px solid #757575; /* Borda cinza clara */
+    padding: 15px; /* Espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    display: flex; /* Flexbox para alinhar os itens */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: stretch; /* Estica os itens para preencher a largura */
+    height: 80vh;
+    max-height: 80vh; /* Altura máxima do container */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    background-image: url("furia-logo-dourado.png");
+    background-size: 100% 100%; /* Cobre todo o container */
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+}
+
+/* Estilização do container das mensagens do chat */
+#chat-messages {
+    flex-grow: 1; /* Faz o container crescer para ocupar o espaço disponível */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando as mensagens excedem a altura */
+    min-height: 200px; /* Altura mínima do container */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    padding: 5px;
+
+}
+
+/* Estilização das mensagens do chat */
+#chat-messages p {
+    color: white;
+    font-size: 1.05em; /* Tamanho da fonte das mensagens */
+    opacity: 1;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Sombra do texto para melhorar a legibilidade */
+    margin-bottom: 5px;
+}
+
+/* Estilização do input de texto */
+input[type="text"] {
+    width: 100%; /* Largura total do input */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    border-radius: 5px;
+    background-color: #afafaf;
+    color: #000000;
+    border: none;
+}
+
+/* Estilização do texto que fica dentro do input (placeholder) */
+input::placeholder {
+    color: #000000; /* Cor do texto do placeholder */
+    opacity: 0.8; /* Opacidade do placeholder */
+    font-weight: bold;
+}
+
+/* Estilização do botão de enviar mensagem */
+button {
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    background-color: #1dad4d; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Estilização do botão ao passar o mouse */
+button:hover {
+    background-color: #0d8b39; /* Cor de fundo ainda mais escura ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+#lista-usuarios {
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Inicialmente oculto */
+    z-index: 1000; /* Garante que a lista apareça sobre outros elementos */
+}
+  
+#lista-usuarios div {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+  
+#lista-usuarios div:hover {
+    background-color: #e2e2e2;
+}
+
+.online-circle {
+    width: 10px;
+    height: 10px;
+}
+
+#online-users-count {
+    color: white;
+    margin-bottom: 10px;
+}
+/* AQUI TERMINA A ESTILIZAÇÃO DO ARQUIVO HTML DO CHAT */
+
+/* AQUI COMEÇA A ESTILIZAÇÃO DO ARQUIVO HTML DO LOGIN */
+/* Estilos para a página de login */
+#login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Importante para posicionar os containers absolutos */
+    width: 100%; /* Garante que ocupa a largura total */
+    min-height: auto; /* Garante que ocupa a altura total */
+    padding: 20px 0; /* Espaçamento interno */
+    overflow: hidden; /* Esconde o overflow */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Estilos para o container de login */
+#login-container {
+    width: 70vh; /* Ajuste conforme necessário */
+    height: 70vh;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+/* Estilos para o título de login */
+#login-title {
+    font-size: 1.5em;       /* Tamanho da fonte */
+    margin-bottom: 15px;    /* Espaçamento abaixo do título (acima da imagem) */
+    color: #ffffff;           /* Cor do texto */
+    text-align: center;     /* Alinhamento do texto */
+    font-weight: bold;      /* Peso da fonte */
+}
+
+/* Estilos para a imagem de login */
+#login-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 75px;
+    border-radius: 5px;
+}
+
+/* Estilos para o input de login */
+#login-input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #dfdfdf;
+    color: #000000;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Estilos para a mensagem de erro caso não haja username */
+.error-message {
+    color: red;           /* Cor do texto vermelho */
+    font-size: 0.9em;      /* Tamanho da fonte menor */
+    margin-top: 5px;       /* Espaçamento acima da mensagem */
+    margin-bottom: 10px;   /* Espaçamento abaixo da mensagem */
+}
+
+#username-error {
+    height: 20px;         /* Garante que o container tem altura suficiente */
+}
+
+/* Estilos para o botão de login */
+#login-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#login-btn:hover {
+    background-color: #3e8e41; /* Cor de fundo mais escura no hover */
+}
+/* AQUI TERMINA A ESTILIZAÇÃO DO ARQUIVO HTML DO LOGIN */

@@ -1,0 +1,23 @@
+# Algoritmo de passo a passo para realização dos Challenges FURIA #
+
+## Requisitos Funcionais ##
+Passo 1: Criar uma tela inicial do chat com um botão para iniciar 
+Passo 2: Fazer um popup para a inserção do nome do usuário
+Passo 3: Aparecer o chat com um espaço para mensagem e um botão para enviar (CONCLUIDO)
+Passo 4: Aparecer uma mensagem mostrando que o usuário entrou no chat
+Passo 5: Configurar o estilo da mensagem para [ Nome: Mensagem ] (CONCLUIDO)
+Passo 6: Fazer com que o canal seja utilizável por vários usuários ao mesmo tempo, permitindo a conversa (CONCLUIDO)
+Passo 7: Aparecer uma mensagem mostrando que o usuário saiu do chat 
+
+### OPCIONAL: ###
+Passo 8: Fazer uma IA que mostre datas de campeonatos, lineup de CS, resultados etc.
+Passo 9: Integrar comandos no chat para interação com os usuários
+
+## Requisitos Não Funcionais: ##
+- Interface tematizada da FURIA (CONCLUIDO)
+- Fazer um banner com link para o site da FURIA (compra de uniformes)
+- Haver uma frase com algum bordão da FURIA, algo que demonstre garra, força e o que a torcida da FURIA representa
+
+### OPCIONAL: ###
+- Contador para o próximo jogo da FURIA CS
+- Fazer um banner com a lineup atual do time

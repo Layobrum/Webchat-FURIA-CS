@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torcida FURIA</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-logo">
+            <img src="{{url_for('static', filename='furia-logo.png')}}" alt="Logo FURIA" class="logo">
+            <span class="bordao">#DiaDeFURIA</span>
+        </div>
+        <h1 class="titulo">Chat da Torcida FURIA</h1>
+        <div class="opcoes-header">
+            <label for="lineup">Lineup</label><input type="checkbox" id="lineup" onchange="showLineup()">
+            <label for="resultados">Partidas Recentes</label><input type="checkbox" id="resultados" onchange="showResultados()">
+        </div>
+    </header>
+    
+    <div id="lineup-container" class="tab-content" style="display: none;">
+        <h2>Lineup</h2>
+        <div id="lineup-players">
+            <div class="player-card" id="player1">
+                <span class="player-name">yuurih 1</span>
+                <img src="{{url_for('static', filename='foto-yuurih.png')}}" alt="Yuurih" class="player-image">
+                
+                <span class="player-name">KSCERATO</span>
+                <img src="{{url_for('static', filename='foto-kscerato.png')}}" alt="KSCERATO" class="player-image">
+                
+                <span class="player-name">FalleN</span>
+                <img src="{{url_for('static', filename='foto-fallen.png')}}" alt="FalleN" class="player-image">
+                
+                <span class="player-name">molodoy</span>
+                <img src="{{url_for('static', filename='foto-molodoy.png')}}" alt="molodoy" class="player-image">
+                
+                <span class="player-name">YEKINDAR</span>
+                <img src="{{url_for('static', filename='foto-yekindar.png')}}" alt="YEKINDAR" class="player-image">
+            </div>
+        </div>
+    </div>
+
+    <div id="resultados-container" class="tab-content" style="display: none;">
+        <h2>Partidas Recentes</h2>
+        <div id="resultados-partidas">
+            <div class="partida-card" id="partida1">
+                <span class="partida-placar">0   -   2</span>
+                <div class="partida-times">
+                    <img src="{{ url_for('static', filename='furia-logo.png') }}" alt="FURIA" class="team-image">
+                    <span> vs </span>
+                    <img src="{{ url_for('static', filename='mongolz-logo.png') }}" alt="MongolZ" class="team-image">
+                </div>
+                <span class="partida-data">09/04/2025</span>
+            </div>
+            <div class="partida-card" id="partida2">
+                <span class="partida-placar">0   -   2</span>
+                <div class="partida-times">
+                    <img src="{{ url_for('static', filename='furia-logo.png') }}" alt="FURIA" class="team-image">
+                    <span> vs </span>
+                    <img src="{{ url_for('static', filename='vp-logo.png') }}" alt="VP" class="team-image">
+                </div>
+                <span class="partida-data">08/04/2025</span>
+            </div>
+            <div class="partida-card" id="partida3">
+                <span class="partida-placar">1   -   2</span>
+                <div class="partida-times">
+                    <img src="{{ url_for('static', filename='furia-logo.png') }}" alt="FURIA" class="team-image">
+                    <span> vs </span>
+                    <img src="{{ url_for('static', filename='col-logo.png') }}" alt="COL" class="team-image">
+                </div>
+                <span class="partida-data">07/04/2025</span>
+            </div>
+            <div class="partida-card" id="partida4">
+                <span class="partida-placar">2   -   0</span>
+                <div class="partida-times">
+                    <img src="{{ url_for('static', filename='furia-logo.png') }}" alt="FURIA" class="team-image">
+                    <span> vs </span>
+                    <img src="{{ url_for('static', filename='apogee-logo.png') }}" alt="Apogee" class="team-image">
+                </div>
+                <span class="partida-data">06/04/2025</span>
+            </div>
+            <div class="partida-card" id="partida5">
+                <span class="partida-placar">1   -   2</span>
+                <div class="partida-times">
+                    <img src="{{ url_for('static', filename='furia-logo.png') }}" alt="FURIA" class="team-image">
+                    <span> vs </span>
+                    <img src="{{ url_for('static', filename='m80-logo.png') }}" alt="M80" class="team-image">
+                </div>
+                <span class="partida-data">22/03/2025</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="login-page">
+        <div id="login-container">
+            <h1 id="login-title">Bem vindo ao Web Chat da FURIA CS</h1>
+            <img src="{{url_for('static', filename='cade-o-fallen.png')}}" id="login-image">
+            <input type="text" id="login-input" placeholder="Digite seu nome de usuário...">
+            <div id="username-error" class="error-message"></div>
+            <button id="login-btn">Iniciar Chat</button>
+        </div>
+    </div>
+
+    <div id="content" style="display: none;">
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <div id="online-users">
+                <img src="{{url_for('static', filename='circulo-verde.png')}}" class="online-circle">
+                <span id="online-users-count"> online</span>
+            </div>
+            <input type="text" id="message" placeholder="Digite sua mensagem...">
+            <button id="send-btn">Enviar</button>
+            <div id="lista-usuarios" style="display: none;"></div>
+        </div>
+    
+    </div>
+
+    <footer>
+        <div id="footer">
+            <p>Desenvolvido por Layo Brum para a torcida FURIA CS - Entre em contato pelo <a href="https://www.linkedin.com/in/layo-brum/" target="_blank">Linkedin</a></p>
+        </div>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
