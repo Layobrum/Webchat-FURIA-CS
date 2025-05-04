@@ -1,6 +1,6 @@
 # Web Chat da Torcida FURIA CS
 
-Este é um aplicativo de chat web desenvolvido com Flask (Python) e SocketIO para a torcida do time de Counter-Strike 2 FURIA. Ele permite que os usuários se conectem em tempo real para discutir partidas, compartilhar notícias e interagir com outros fãs.
+Este é um aplicativo de chat web desenvolvido com Flask (Python) e SocketIO para a torcida do time da FURIA de Counter-Strike 2. Ele permite que os usuários se conectem em tempo real para discutir partidas, compartilhar notícias e interagir com outros fãs.
 
 ## Funcionalidades
 
@@ -29,7 +29,7 @@ Antes de começar, você precisará ter o Python instalado (versão 3.6 ou super
 
     ```bash
     git clone <URL_DO_SEU_REPOSITORIO>
-    cd <NOME_DO_REPOSITORIO>
+    cd <AS_DUHAS_UDASHD>
     ```
 
 2.  **Crie um ambiente virtual (recomendado):**
@@ -74,7 +74,7 @@ Antes de começar, você precisará ter o Python instalado (versão 3.6 ou super
 │   ├── cade-o-fallen.png
 │   ├── ...          # Outras imagens
 └── templates/
-└── index.html   # Página HTML principal
+│   └── index.html   # Página HTML principal
 ├── requirements.txt # Lista de dependências Python
 └── README.md        # Este arquivo
 
@@ -117,7 +117,6 @@ Antes de começar, você precisará ter o Python instalado (versão 3.6 ou super
 * **Lógica do Login:** Trata o envio do nome de usuário e a exibição/ocultação das seções de login e chat.
 * **Envio de Mensagens:** Envia mensagens para o servidor SocketIO quando o botão é clicado ou a tecla Enter é pressionada.
 * **Recebimento de Mensagens:** Recebe mensagens do servidor e as exibe na área do chat, formatando a cor do nome do usuário.
-* **Lista de Usuários Online:** Mantém e exibe a lista de usuários online, com funcionalidade de mencionar usuários ao digitar "@".
 * **Exibição de Lineup/Resultados:** Controla a exibição das seções de lineup e resultados com checkboxes.
 * **Cores de Usuário:** Gera cores aleatórias para cada usuário.
 
@@ -125,22 +124,14 @@ Antes de começar, você precisará ter o Python instalado (versão 3.6 ou super
 
 * **Autenticação Avançada:** Implementar um sistema de autenticação mais robusto (ex: OAuth, JWT).
 * **Persistência de Mensagens:** Salvar as mensagens em um banco de dados para que não se percam ao recarregar a página.
-* **Salas de Chat:** Permitir a criação de salas de chat separadas.
-* **Mensagens Privadas:** Adicionar a funcionalidade de enviar mensagens diretas para outros usuários.
-* **Upload de Arquivos:** Permitir o envio de arquivos no chat.
-* **Testes Unitários:** Adicionar testes para garantir a qualidade do código.
+* **Mensagens com Menções:** Adicionar a funcionalidade de enviar mensagens mencionando outros usuários.
 * **Responsividade Completa:** Melhorar a responsividade para diferentes dispositivos e tamanhos de tela.
-* **Internacionalização (i18n):** Suporte para múltiplos idiomas.
 * **Acessibilidade (a11y):** Garantir que o chat seja acessível para usuários com deficiências.
 
 ## Contribuição
 
 Contribuições são bem-vindas! Se você tiver alguma sugestão de melhoria ou encontrar algum bug, por favor, abra uma issue ou envie um pull request.
 
-## Licença
-
-[INSERIR A LICENÇA AQUI] (Ex: MIT License)
-
 ## Autor
 
-Layo Brum - [https://www.linkedin.com/in/layo-brum/](https://www.linkedin.com/in/layo-brum/)
+Layo Brum - [Linkedin](https://www.linkedin.com/in/layo-brum/)
