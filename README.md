@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)++
+
 # Web Chat da Torcida FURIA CS
 
 Este é um aplicativo de chat web desenvolvido com Flask (Python) e SocketIO para a torcida do time da FURIA de Counter-Strike 2. Ele permite que os usuários se conectem em tempo real para discutir partidas, compartilhar notícias e interagir com outros fãs.
@@ -135,3 +137,7 @@ Contribuições são bem-vindas! Se você tiver alguma sugestão de melhoria ou 
 ## Autor
 
 Layo Brum - [Linkedin](https://www.linkedin.com/in/layo-brum/)
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
