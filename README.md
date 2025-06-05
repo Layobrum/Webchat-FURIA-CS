@@ -56,21 +56,6 @@ Antes de começar, você precisará ter o Python instalado (versão 3.6 ou super
 
     Abra o navegador e vá para `http://127.0.0.1:5000/`.
 
-## Estrutura do Projeto
-
-.├── app.py           # Arquivo principal do Flask;
-.├── static/;
-.│   ├── style.css    # Estilos CSS;
-.│   ├── script.js    # Lógica do frontend;
-.│   ├── furia-logo.png;
-.│   ├── furia-banner2.png;
-.│   ├── cade-o-fallen.png;
-.│   ├── ...          # Outras imagens;
-.└── templates/;
-.│   └── index.html   # Página HTML principal;
-.├── requirements.txt # Lista de dependências Python;
-.└── README.md        # Este arquivo;
-
 ##  Documentação do Código
 
 ### `app.py` (Backend - Flask)
