@@ -30,22 +30,13 @@ Antes de começar, você precisará ter o Python instalado (versão 3.6 ou super
 1.  **Clone o repositório:**
 
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO>
-    cd <AS_DUHAS_UDASHD>
+    git clone https://github.com/Layobrum/Webchat-FURIA-CS.git
     ```
 
-2.  **Crie um ambiente virtual (recomendado):**
+2.  **Instale as dependências:**
 
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # No Linux/macOS
-    venv\Scripts\activate  # No Windows
-    ```
-
-3.  **Instale as dependências:**
-
-    ```bash
-    pip install -r requirements.txt
+    pip install flask flask-socketio
     ```
 
 ## Configuração
